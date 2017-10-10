@@ -4,6 +4,7 @@ html, body {
 }
 
 #container-frame {
+  display: flex;
   flex-direction: row;
   height: 100%;
 }
