@@ -20,7 +20,9 @@ function generateConfig(srcdir) {
         ],
         module: {
             loaders: [
-                {test: /\.js$/, include: [/src/], exclude: /node_modules/, loader: 'babel-loader'}
+                {test: /\.js$/, include: [
+                    /node_modules\/container-wrapper/
+                    ,/src/], loader: 'babel-loader'}
             ]
         },
         devServer: {

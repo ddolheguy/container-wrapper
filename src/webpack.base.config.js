@@ -14,7 +14,9 @@ module.exports = {
     module: {
         loaders: [
             {test: /\.scss$/, use: [{loader: "style-loader"}, {loader: "css-loader"}, {loader: "sass-loader"}]},
-            {test: /\.js$/, include: [/src/], exclude: /node_modules/, loader: 'babel-loader'}
+            {test: /\.js$/, include: [
+                /node_modules\/container-wrapper/
+                ,/src/], loader: 'babel-loader'}
         ]
     },
     devtool: 'eval-source-map'

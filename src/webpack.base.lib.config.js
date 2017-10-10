@@ -22,15 +22,11 @@ function generateConfig(packageFile, entries, srcdir) {
             publicPath: packageFile.name + '/',
             jsonpFunction: 'WSJsonp_' + packageFile.name.replace(/[^0-9a-z]/gi, '')
         },
-        resolve: {
-            root: path.resolve(srcdir, 'src')
-        },
-        plugins: {
-
-        },
         module: {
             loaders: [
-                {test: /\.js$/, include: [/src/], exclude: /node_modules/, loader: 'babel-loader'}
+                {test: /\.js$/, include: [
+                    /node_modules\/container-wrapper/
+                    ,/src/], loader: 'babel-loader'}
             ]
         }
     };
