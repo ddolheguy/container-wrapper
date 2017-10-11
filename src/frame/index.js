@@ -5,7 +5,7 @@ import router from '../router';
 
 const configureModules = (modules = []) => {
 
-    menu.attach(modules);
+    //menu.attach(modules);
     builder.buildModules(modules, router);
 
     router.resolve();
