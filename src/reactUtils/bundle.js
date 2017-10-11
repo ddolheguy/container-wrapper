@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
+import PropTypes from 'prop-types';
 
-class BundleLoader extends Component {
+class Bundle extends Component {
     constructor(props) {
         super(props);
 
@@ -30,4 +31,8 @@ class BundleLoader extends Component {
     }
 }
 
-export default BundleLoader
+Bundle.propTypes = {
+    load: PropTypes.func.isRequired
+};
+
+export default Bundle
